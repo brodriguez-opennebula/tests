@@ -14,16 +14,16 @@ Se hace una AND bit a bit entre la máscara y la dirección para saber qué es q
 Definición "de estar por casa":
 - Pensar en binario (32 bits)
 - Es, en vocabulario técnico, _un chorro de unos_. Se puede escribir de dos maneras:
-  - Forma canónica: 10000000.0.0.0 = 128.0.0.0 ; 11111111.11111111.11111111.0 = 255.255.255.0
-  - Forma CIDR: 10000000.0.0.0 = /1 ; 11111111.11111111.11111111.0 = /24 
-La forma CIDR es más corta y hace que parezca que sabes más (una máscara barraveinticuatro, una máscara barradieciséis)
+  - Forma canónica: `10000000.0.0.0 = 128.0.0.0`; `11111111.11111111.11111111.0` -> `255.255.255.0`
+  - Forma CIDR: `10000000.0.0.0 = /1`; `11111111.11111111.11111111.0 = /24`
+La forma CIDR es más corta y hace que parezca que sabes más (una _barraveinticuatro_, una _barradieciséis_ ...)
 
 _IMPORTANTE_: 
 - La primera dirección de cada red (ACABA EN 0) se utiliza para identificar TODA la red
 - La última dirección de cada red (ACABA EN 1) se utiliza para identificar a TODOS los hosts (broadcast)
 
-Por ejemplo, la red doméstica estándar:
-Dirección 192.168.1.16/24 -> `11000000.10101000.00000001.00010000`
+Por ejemplo, la red doméstica estándar típica del router:
+- Dirección 192.168.1.16/24 -> `11000000.10101000.00000001.00010000`
 - Máscara de red: 255.255.255.0 -> `11111111.11111111.11111111.0`
 
 Hacemos la AND:
